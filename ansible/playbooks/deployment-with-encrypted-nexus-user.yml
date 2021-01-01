@@ -1,7 +1,4 @@
 - hosts: all
-  vars:
-    nexus_user_name: "{{nexus_username}}"
-    nexus_pass_word: "{{nexus_password}}"
   tasks:
   - name: current host is {{ansible_hostname}}
     shell: echo "$HOSTNAME"
