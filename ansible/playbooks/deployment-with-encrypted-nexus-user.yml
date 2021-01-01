@@ -9,8 +9,8 @@
     get_url:
       url: http://nexus0101.ncodeit.com/repository/ncodeit-maven-repo/com/ncodeit/ncodeit-hello-world/1.0/ncodeit-hello-world-1.0.war
       dest: /tmp
-      username: "{{nexus_user_name}}"
-      password: "{{nexus_pass_word}}"
+      username: "{{nexus_username}}"
+      password: "{{nexus_password}}"
       force: yes
   - name: deployment
     copy:
