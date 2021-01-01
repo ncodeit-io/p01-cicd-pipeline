@@ -1,0 +1,16 @@
+- hosts: all
+  tasks:
+  - name: current host is {{ansible_hostname}}
+    shell: echo "$HOSTNAME"
+  - name: download the artifacts from the nexus
+    get_url:
+      url: "{{repo_url}}"
+      dest: /tmp
+      username: "{{nexus_username}}"
+      password: "{{nexus_password}}"
+      force: yes
+  - name: deployment
+    copy:
+      src: /tmp/ncodeit-hello-world-1.0.war
+      dest: /opt/tomcat85/webapps
+      mode: u+rw,g-wx,o-rwx
