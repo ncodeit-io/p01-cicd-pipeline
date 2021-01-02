@@ -9,7 +9,7 @@
       username: "{{nexus_username}}"
       password: "{{nexus_password}}"
       force: yes
-  - name: deployment
+  - name: deploy the war file to tomcat webapps directory
     copy:
       remote_src: "/tmp/{{war_file_name}}"
       dest: /opt/tomcat85/webapps
