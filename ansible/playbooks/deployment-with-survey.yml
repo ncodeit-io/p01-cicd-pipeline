@@ -11,6 +11,7 @@
       force: yes
   - name: deploy the war file to tomcat webapps directory
     copy:
-      remote_src: "/tmp/{{war_file_name}}"
+      src: "/tmp/{{war_file_name}}"
+      remote_src: true
       dest: /opt/tomcat85/webapps
       mode: u+rw,g-wx,o-rwx
