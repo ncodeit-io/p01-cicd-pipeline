@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+  - name: Check url for status code 200 on SIT servers
+    uri:
+      url: "{{item}}"
+      status_code: 200
+    loop:
+      - http://192.168.1.21:8080/ncodeit-hello-world-7
+      - http://192.168.1.21:8080/ncodeit-hello-world-7
