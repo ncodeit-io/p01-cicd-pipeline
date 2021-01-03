@@ -6,3 +6,7 @@
       status_code: 200
     loop:
       - https://google.com
+      - https://microsoft.com
+      - http://ncodeit.com
+      - https://ncodeit.com
+      - www.ncodeit.com
